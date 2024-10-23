@@ -1,0 +1,7 @@
+.navbar-container {
+    @apply w-full bg-blue-300;
+
+    .logo {
+        @apply text-gray-900;
+    }
+}
