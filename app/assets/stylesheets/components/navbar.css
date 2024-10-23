@@ -1,7 +1,17 @@
 .navbar-container {
-    @apply w-full bg-blue-300;
+    @apply w-full flex flex-col items-center justify-center py-2;
 
     .logo {
-        @apply text-gray-900;
+        @apply flex items-center justify-center px-2;
+
+        .logo-img {
+            height: 50px;
+        }
+    }
+
+    .navbar {
+        @apply w-full flex flex-row justify-around items-center;
+
+        max-width: 700px;
     }
 }

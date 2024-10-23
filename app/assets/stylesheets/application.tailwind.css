@@ -2,5 +2,56 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+
 @import "home.css";
 @import "components/navbar.css";
+
+html {
+    @apply font-sans;
+
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @apply font-header font-bold text-primary;
+}
+
+p, li {
+    @apply text-sm lg:text-base;
+}
+
+h1 {
+    @apply text-3xl lg:text-4xl;
+}
+
+h2 {
+    @apply text-xl lg:text-2xl;
+}
+
+h3 {
+    @apply text-lg lg:text-xl;
+}
+
+.main-container {
+    @apply container mx-auto;
+}
+
+.link {
+    @apply p-2 border-b-4 border-transparent text-sm lg:text-lg;
+
+    &:hover, &__active {
+        @apply border-primary;
+    }
+}
+
+.line-break {
+    @apply border-2 border-primary my-5 mx-auto;
+
+    width: 95%;
+}
+
+.vertical-line {
+    @apply border-2 border-primary h-full;
+}

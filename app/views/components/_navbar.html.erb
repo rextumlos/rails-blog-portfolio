@@ -1,3 +1,13 @@
 <nav class="navbar-container">
-  <h1 class="logo">Navbar</h1>
+  <div class="logo">
+    <%= image_tag "logo.svg", class: "logo-img" %>
+  </div>
+
+  <div class="navbar">
+    <%= link_to "Home", root_path, class: "link #{current_page?(root_path) ? 'link__active' : ''}" %>
+    <%= link_to "About", root_path, class: "link" %>
+    <%= link_to "Experience", root_path, class: "link" %>
+    <%= link_to "Contact", root_path, class: "link" %>
+    <%= link_to "Blogs", root_path, class: "link" %>
+  </div>
 </nav>

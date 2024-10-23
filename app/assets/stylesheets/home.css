@@ -1,3 +1,45 @@
-.home {
-    @apply text-green-500 text-6xl;
+.hero-section {
+    @apply w-full flex flex-col justify-center items-center;
+
+    .heading {
+        @apply w-full flex flex-row justify-between items-center mb-2;
+
+        max-width: 500px;
+        @media (min-width: 768px) {
+            max-width: 1000px;
+        }
+
+        .bracket {
+            @apply text-8xl font-bold text-primary;
+            @media (min-width: 768px) {
+                font-size: 16rem;
+            }
+        }
+
+        .name {
+            @apply md:text-8xl;
+            line-height: 100%;
+            max-width: 200px;
+
+            @media (min-width: 768px) {
+                max-width: 500px;
+            }
+        }
+    }
+
+    .sub-heading {
+        @apply text-xl lg:text-4xl mb-3;
+    }
+
+    .hero-detail {
+        @apply flex flex-row justify-center items-center;
+    }
+}
+
+.info-section {
+    @apply mx-2;
+
+    .information {
+        @apply flex flex-col;
+    }
 }
