@@ -37,9 +37,17 @@
 }
 
 .info-section {
-    @apply mx-2;
+    @apply mx-2 lg:flex lg:flex-row;
 
     .information {
         @apply flex flex-col;
     }
+}
+
+.recent-blogs-section {
+    @apply mx-2 h-36 border-primary;
+}
+
+.contact-section {
+    @apply mx-2;
 }

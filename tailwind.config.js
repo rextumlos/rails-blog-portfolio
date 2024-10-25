@@ -25,10 +25,25 @@ module.exports = {
             },
             colors: {
                 primary: {
-                    light: '#10b981',
-                    DEFAULT: '#00742e',
-                    dark: '#022c1b',
-                }
+                    light: {
+                        DEFAULT: 'rgba(16, 185, 129, 1)',  // 100% opacity
+                        30: 'rgba(16, 185, 129, 0.3)',     // 30% opacity
+                        50: 'rgba(16, 185, 129, 0.5)',     // 50% opacity
+                        70: 'rgba(16, 185, 129, 0.7)',     // 70% opacity
+                    },
+                    DEFAULT: {
+                        DEFAULT: 'rgba(0, 116, 46, 1)',    // 100% opacity
+                        30: 'rgba(0, 116, 46, 0.3)',       // 30% opacity
+                        50: 'rgba(0, 116, 46, 0.5)',       // 50% opacity
+                        70: 'rgba(0, 116, 46, 0.7)',       // 70% opacity
+                    },
+                    dark: {
+                        DEFAULT: 'rgba(2, 44, 27, 1)',     // 100% opacity
+                        30: 'rgba(2, 44, 27, 0.3)',        // 30% opacity
+                        50: 'rgba(2, 44, 27, 0.5)',        // 50% opacity
+                        70: 'rgba(2, 44, 27, 0.7)',        // 70% opacity
+                    },
+                },
             },
         },
     },

@@ -41,15 +41,19 @@ h3 {
 .link {
     @apply p-2 border-b-4 border-transparent text-sm lg:text-lg;
 
-    &:hover, &__active {
+    &:hover, & __active {
         @apply border-primary;
     }
 }
 
 .line-break {
-    @apply border-2 border-primary my-5 mx-auto;
+    @apply border-2 border-primary my-5 mx-auto md:w-full;
 
     width: 95%;
+
+    @media (min-width: 768px) {
+        width: 100%;
+    }
 }
 
 .vertical-line {
