@@ -7,6 +7,7 @@
 
 @import "home.css";
 @import "components/navbar.css";
+@import "components/footer.css";
 
 html {
     @apply font-sans;
@@ -58,4 +59,8 @@ h3 {
 
 .vertical-line {
     @apply border-2 border-primary h-full;
+}
+
+.primary-button {
+    @apply text-white bg-primary hover:bg-primary-light focus:ring-4 focus:ring-primary font-medium text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none;
 }

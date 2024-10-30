@@ -1,0 +1,38 @@
+footer {
+    @apply w-full flex flex-col items-center justify-center py-2 mt-4 bg-primary text-white;
+
+    .logo {
+        @apply flex items-center justify-center px-2;
+
+        .logo-img {
+            height: 50px;
+        }
+    }
+
+    h1 {
+        @apply text-white;
+    }
+
+    .links {
+        @apply w-full flex flex-row justify-around items-center mb-2;
+
+        max-width: 700px;
+    }
+
+    .newsletter {
+        @apply flex flex-col items-center justify-center px-2;
+
+        p {
+            @apply text-center text-xs;
+        }
+
+        max-width: 700px;
+
+        .newsletter-form {
+
+            .sign-up-btn {
+                @apply text-black bg-white hover:bg-primary-light focus:ring-4 focus:ring-primary font-medium text-xs px-3 py-1 me-2 mb-2 focus:outline-none;
+            }
+        }
+    }
+}
