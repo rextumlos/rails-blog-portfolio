@@ -23,6 +23,7 @@ services:
       bash -c
       "yarn install --check-files && \
        bundle install && \
+       rake db:create && \
        rake db:migrate && \
        rm -f tmp/pids/server.pid && \
        ./bin/dev"
