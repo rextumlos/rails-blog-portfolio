@@ -1,0 +1,94 @@
+<div class="information mb-3">
+  <h2 class="mb-3">> <%= info[:title] %></h2>
+
+  <div class="flex flex-row">
+    <div class="ml-5 mr-6">
+      <div class="vertical-line"></div>
+    </div>
+
+    <div>
+      <% info[:data].each do |data| %>
+        <p class="font-bold"><%= data[:title].upcase %></p>
+
+        <% if data[:skills].present? %>
+          <ul class="mb-1">
+            <% data[:skills].each do |skill| %>
+              <li>● <%= custom_titleize skill %></li>
+            <% end %>
+          </ul>
+        <% end %>
+
+        <% if data[:educations].present? %>
+          <% data[:educations].each do |education| %>
+            <p><%= custom_titleize education[:school] %></p>
+            <p class="italic"><%= education[:date] %></p>
+          <% end %>
+        <% end %>
+
+        <% if data[:achievements].present? %>
+          <% data[:achievements].each do |achievement| %>
+            <p class="italic mb-2"><%= achievement[:date] %></p>
+          <% end %>
+        <% end %>
+
+        <% if data[:experiences].present? %>
+          <% data[:experiences].each do |experience| %>
+            <p><%= experience[:company] %></p>
+            <p class="italic mb-1"><%= experience[:date] %></p>
+            <ul>
+              <% experience[:descriptions].each do |description| %>
+                <li class="mb-1">● <%= description %></li>
+              <% end %>
+            </ul>
+          <% end %>
+        <% end %>
+      <% end %>
+
+      <!--      # Skills-->
+      <!--      <p class="font-bold">BACKEND DEVELOPMENT</p>-->
+      <!--      <ul class="mb-1">-->
+      <!--        <li>● Ruby on Rails</li>-->
+      <!--        <li>● ExpressJS</li>-->
+      <!--        <li>● Python Tornado</li>-->
+      <!--        <li>● REST API</li>-->
+      <!--      </ul>-->
+
+      <!--      # Education-->
+      <!--      <p class="font-bold">BACHELOR OF SCIENCE IN COMPUTER ENGINEERING</p>-->
+      <!--      <p>Polytechnic University of the Philippines - Manila</p>-->
+      <!--      <p class="italic">2019 - 2023</p>-->
+
+      <!--      # Achievements-->
+      <!--      <p class="font-bold">PRESIDENT’S LISTER</p>-->
+      <!--      <p class="italic mb-2">2023</p>-->
+
+      <!--      # Experiences-->
+      <!--      <p class="font-bold">SOFTWARE ENGINEER (ON-SITE)</p>-->
+      <!--      <p>Secure Smarter Services Inc</p>-->
+      <!--      <p class="italic mb-1">September 2023 - Present</p>-->
+      <!--      <ul>-->
+      <!--        <li class="mb-1">● Develop and maintain robust, scalable web applications using Ruby on Rails and Python,-->
+      <!--          ensuring high-->
+      <!--          performance and seamless user experience.-->
+      <!--        </li>-->
+      <!--        <li class="mb-1">● Integrated third-party platforms including payment gateways and gaming services,-->
+      <!--          enhancing system-->
+      <!--          interoperability and client satisfaction.-->
+      <!--        </li>-->
+      <!--        <li class="mb-1">● Collaborated with clients to analyze requirements, delivering custom web service-->
+      <!--          solutions aligned-->
+      <!--          with business goals and technical specifications.-->
+      <!--        </li>-->
+      <!--        <li class="mb-1">● Created tailored business solutions for APIs, optimizing data flow and communication-->
+      <!--          between external-->
+      <!--          systems and internal services to meet operational demands and client objectives.-->
+      <!--        </li>-->
+      <!--        <li class="mb-1">● Designed and implemented dynamic, responsive pages using WordPress, improving the user-->
+      <!--          interface, SEO,-->
+      <!--          and overall site functionality.-->
+      <!--        </li>-->
+      <!--      </ul>-->
+    </div>
+  </div>
+</div>
+

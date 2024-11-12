@@ -38,122 +38,14 @@
   <section class="info-section">
 
     <div class="lg:w-1/2">
-      <div class="information mb-3">
-        <h2 class="mb-3">> TECHNICAL SKILLS</h2>
-
-        <div class="flex flex-row">
-          <div class="ml-5 mr-6">
-            <div class="vertical-line"></div>
-          </div>
-
-          <div>
-            <p class="font-bold">BACKEND DEVELOPMENT</p>
-            <ul class="mb-1">
-              <li>● Ruby on Rails</li>
-              <li>● ExpressJS</li>
-              <li>● Python Tornado</li>
-              <li>● REST API</li>
-            </ul>
-
-            <p class="font-bold">FRONTEND DEVELOPMENT</p>
-            <ul class="mb-1">
-              <li>● React JS, ERB, Tailwind CSS, Bootstrap</li>
-            </ul>
-
-            <p class="font-bold">DATABASES</p>
-            <ul class="mb-1">
-              <li>● MySQL, PostgreSQL</li>
-              <li>● MongoDB, Firebase Storage</li>
-            </ul>
-
-            <p class="font-bold">BASIC PROGRAMMING</p>
-            <ul class="mb-1">
-              <li>● Python, C, C++, C#</li>
-            </ul>
-
-            <p class="font-bold">TOOLS</p>
-            <ul class="mb-1">
-              <li>● Git, Postman, WordPress, Docker, Figma</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="information mb-3">
-        <h2 class="mb-3">> EDUCATION</h2>
-
-        <div class="flex flex-row">
-          <div class="ml-5 mr-6">
-            <div class="vertical-line"></div>
-          </div>
-
-          <div>
-            <p class="font-bold">BACHELOR OF SCIENCE IN COMPUTER ENGINEERING</p>
-            <p>Polytechnic University of the Philippines - Manila</p>
-            <p class="italic">2019 - 2023</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="information mb-3">
-        <h2 class="mb-3">> ACHIEVEMENTS</h2>
-
-        <div class="flex flex-row">
-          <div class="ml-5 mr-6">
-            <div class="vertical-line"></div>
-          </div>
-
-          <div>
-            <p class="font-bold">PRESIDENT’S LISTER</p>
-            <p class="italic mb-2">2023</p>
-
-            <p class="font-bold">DOST SEI SCHOLAR 2019</p>
-            <p class="italic">2019 - 2023</p>
-          </div>
-        </div>
-      </div>
-
+      <%= render partial: "components/info", locals: { info: @technical_skills }  %>
+      <%= render partial: "components/info", locals: { info: @educations }  %>
+      <%= render partial: "components/info", locals: { info: @achievements }  %>
     </div>
 
 
     <div class="lg:w-1/2">
-      <div class="information mb-3">
-        <h2 class="mb-3">> EXPERIENCE</h2>
-
-        <div class="flex flex-row">
-          <div class="ml-5 mr-6">
-            <div class="vertical-line"></div>
-          </div>
-
-          <div>
-            <p class="font-bold">SOFTWARE ENGINEER (ON-SITE)</p>
-            <p>Secure Smarter Services Inc</p>
-            <p class="italic mb-1">September 2023 - Present</p>
-            <ul>
-              <li class="mb-1">● Develop and maintain robust, scalable web applications using Ruby on Rails and Python,
-                ensuring high
-                performance and seamless user experience.
-              </li>
-              <li class="mb-1">● Integrated third-party platforms including payment gateways and gaming services,
-                enhancing system
-                interoperability and client satisfaction.
-              </li>
-              <li class="mb-1">● Collaborated with clients to analyze requirements, delivering custom web service
-                solutions aligned
-                with business goals and technical specifications.
-              </li>
-              <li class="mb-1">● Created tailored business solutions for APIs, optimizing data flow and communication
-                between external
-                systems and internal services to meet operational demands and client objectives.
-              </li>
-              <li class="mb-1">● Designed and implemented dynamic, responsive pages using WordPress, improving the user
-                interface, SEO,
-                and overall site functionality.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <%= render partial: "components/info", locals: { info: @experiences }  %>
     </div>
 
   </section>

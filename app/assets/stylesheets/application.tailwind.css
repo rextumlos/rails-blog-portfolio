@@ -42,9 +42,13 @@ h3 {
 .link {
     @apply p-2 border-b-4 border-transparent text-sm lg:text-lg;
 
-    &:hover, & __active {
+    &:hover {
         @apply border-primary;
     }
+}
+
+.link__active {
+    @apply border-primary;
 }
 
 .line-break {
