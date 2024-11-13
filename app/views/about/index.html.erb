@@ -1,0 +1,31 @@
+<div class="main-container">
+  <section class="hero-section">
+    <div class="heading">
+      <span class="bracket">[</span>
+      <h1 class="name text-center">ABOUT</h1>
+      <span class="bracket">]</span>
+    </div>
+  </section>
+
+  <div class="line-break"></div>
+
+  <section class="info-section">
+
+    <div class="lg:w-1/2">
+      <%= render partial: "components/info", locals: { info: @technical_skills } %>
+      <%= render partial: "components/info", locals: { info: @educations } %>
+      <%= render partial: "components/info", locals: { info: @achievements } %>
+    </div>
+
+
+    <div class="lg:w-1/2">
+      <%= render partial: "components/info", locals: { info: @experiences } %>
+    </div>
+
+  </section>
+
+  <div class="line-break"></div>
+
+  <%= render partial: "components/contact_me_form" %>
+</div>
+

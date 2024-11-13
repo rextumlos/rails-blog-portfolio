@@ -35,17 +35,16 @@
 
   <div class="line-break"></div>
 
-  <section class="info-section">
+  <section class="tech-used">
+    <h2 class="mb-3">> TECH USED</h2>
 
-    <div class="lg:w-1/2">
-      <%= render partial: "components/info", locals: { info: @technical_skills }  %>
-      <%= render partial: "components/info", locals: { info: @educations }  %>
-      <%= render partial: "components/info", locals: { info: @achievements }  %>
-    </div>
-
-
-    <div class="lg:w-1/2">
-      <%= render partial: "components/info", locals: { info: @experiences }  %>
+    <div class="flex flex-row justify-center flex-wrap gap-2">
+      <% @techs.each do |tech| %>
+        <div class="group flex flex-col items-center justify-center gap-1 bg-white hover:bg-primary border-2 border-primary p-3 rounded w-full h-full" style="max-width: 150px">
+          <i class="<%= tech[:icon] %> text-primary group-hover:text-white text-5xl"></i>
+          <span class="text-sm group-hover:text-white"><%= tech[:title] %></span>
+        </div>
+      <% end %>
     </div>
 
   </section>
@@ -59,29 +58,6 @@
 
   <div class="line-break"></div>
 
-  <section class="contact-section">
-    <h2 class="mb-3">> CONTACT ME</h2>
-
-    <%= form_with class: '' do |form| %>
-      <div class="relative z-0 w-full mb-5 group">
-        <%= form.email_field :email, placeholder: " ", class:'block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-primary-50 appearance-none focus:outline-none focus:ring-0 focus:border-primary peer' %>
-        <%= form.label :email, "Email Address", class:'peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-primary peer-focus:dark:text-primary peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6' %>
-      </div>
-
-      <div class="relative z-0 w-full mb-5 group">
-        <%= form.text_field :subject, placeholder: " ", class:'block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-primary-50 appearance-none focus:outline-none focus:ring-0 focus:border-primary peer' %>
-        <%= form.label :subject, "Subject", class:'peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-primary peer-focus:dark:text-primary peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6' %>
-      </div>
-
-      <div class="relative z-0 w-full mb-5 group">
-        <%= form.text_area :message, placeholder: " ", class:'block py-2.5 px-0 w-full h-32 text-sm text-gray-900 bg-transparent border-0 border-b-2 border-primary-50 appearance-none focus:outline-none focus:ring-0 focus:border-primary peer' %>
-        <%= form.label :message, "Message", class:'peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-primary peer-focus:dark:text-primary peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6' %>
-      </div>
-
-      <%= form.submit "Submit", class: "primary-button" %>
-
-    <% end %>
-  </section>
-
+  <%= render partial: "components/contact_me_form" %>
 
 </div>
