@@ -38,6 +38,7 @@ services:
       - 1234:1234
     environment:
       - REDIS_URL=redis://redis:6379/0
+      - CHOKIDAR_USEPOLLING=true
     depends_on:
       - db
       - redis
