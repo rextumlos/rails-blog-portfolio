@@ -4,5 +4,8 @@
 
 import { application } from "./application"
 
+import GrabToScrollController from "./grab_to_scroll_controller"
+application.register("grab-to-scroll", GrabToScrollController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
