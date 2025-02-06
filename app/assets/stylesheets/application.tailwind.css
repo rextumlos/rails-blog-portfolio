@@ -13,6 +13,17 @@ html {
     @apply font-sans;
 
     box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    height: 8px;
+    width: 4px;
+    background: gray;
+}
+::-webkit-scrollbar-thumb:horizontal{
+    background: rgba(0, 116, 46, 1);
+    border-radius: 10px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -37,6 +48,8 @@ h3 {
 
 .main-container {
     @apply container mx-auto;
+
+    max-width: 1200px;
 }
 
 .link {
@@ -67,4 +80,12 @@ h3 {
 
 .primary-button {
     @apply text-white bg-primary hover:bg-primary-light focus:ring-4 focus:ring-primary font-medium text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none;
+}
+
+.grab {
+    cursor: grab;
+}
+
+.grabbing {
+    cursor: grabbing;
 }

@@ -1,0 +1,25 @@
+<div class="snap-center flex-shrink-0 w-full max-w-md bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+    <div class="md:flex h-full">
+        <div class="md:shrink-0 md:w-48">
+            <img class="md:h-full w-full object-cover h-48" src="https://loremflickr.com/g/320/240/team">
+        </div>
+        <div class="p-8 flex-grow">
+            <a href="#" class="block mt-1 mb-2 text-lg leading-tight font-medium text-black hover:underline">
+                <%= project[:title]%>
+            </a>
+            <div class="flex flex-wrap">
+                <% project[:stacks].each do |stack|%>
+                    <span class="bg-primary text-white text-xs font-medium me-2 mb-1 px-3 py-1 rounded-sm">
+                        <i class="<%= tech_icon(stack) %> text-white group-hover:text-white text-sm"></i> <%= stack %>
+                    </span>
+                <% end %>
+            </div>
+            
+            <% if project[:role].present? %>
+                <p class="mt-2 text-slate-500"><%= project[:role] %></p>
+            <% end %>
+        
+            <p class="mt-2 text-slate-500"><%= project[:description] %></p>
+        </div>
+    </div>
+</div>

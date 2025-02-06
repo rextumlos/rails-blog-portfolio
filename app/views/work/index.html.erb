@@ -1,0 +1,39 @@
+<div class="main-container" data-controller="grab-to-scroll">
+  <section class="hero-section">
+    <div class="heading">
+      <span class="bracket">[</span>
+      <h1 class="name text-center">WORK</h1>
+      <span class="bracket">]</span>
+    </div>
+  </section>
+
+  <div class="line-break"></div>
+
+  <section class="personal-projects">
+    <h2 class="mb-3">> PERSONAL PROJECTS</h2>
+
+    <div class="flex snap-x overflow-x-scroll space-x-4 p-4 select-none">
+      <% @personal_projects.each do |project| %>
+        <%= render partial: "components/image_card", locals: { project: project } %>
+      <% end %>
+    </div>
+
+  </section>
+
+  <div class="line-break"></div>
+
+  <section class="other-projects">
+    <h2 class="mb-3">> OTHER PROJECTS</h2>
+
+    <div class="flex snap-x overflow-x-scroll space-x-4 p-4 select-none">
+      <% @other_projects.each do |project| %>
+        <%= render partial: "components/image_card", locals: { project: project } %>
+      <% end %>
+    </div>
+
+  </section>
+
+  <div class="line-break"></div>
+
+  <%= render partial: "components/contact_me_form" %>
+</div>
