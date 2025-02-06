@@ -35,15 +35,56 @@
 
   <div class="line-break"></div>
 
+  <section class="info-section">
+
+    <div class="lg:w-1/2">
+      <%= render partial: "components/info", locals: { info: @technical_skills } %>
+      <%= render partial: "components/info", locals: { info: @educations } %>
+      <%= render partial: "components/info", locals: { info: @achievements } %>
+    </div>
+
+
+    <div class="lg:w-1/2">
+      <%= render partial: "components/info", locals: { info: @experiences } %>
+    </div>
+
+  </section>
+
+  <div class="line-break"></div>
+
   <section class="tech-used">
     <h2 class="mb-3">> TECH USED</h2>
 
     <div class="flex flex-row justify-center flex-wrap gap-2">
       <% @techs.each do |tech| %>
         <div class="group flex flex-col items-center justify-center gap-1 bg-white hover:bg-primary border-2 border-primary p-3 rounded w-full h-full" style="max-width: 150px">
-          <i class="<%= tech[:icon] %> text-primary group-hover:text-white text-5xl"></i>
-          <span class="text-sm group-hover:text-white"><%= tech[:title] %></span>
+          <i class="<%= tech_icon(tech) %> text-primary group-hover:text-white text-5xl"></i>
+          <span class="text-sm group-hover:text-white"><%= tech %></span>
         </div>
+      <% end %>
+    </div>
+
+  </section>
+
+  <div class="line-break"></div>
+
+   <section class="personal-projects mb-4">
+    <h2 class="mb-3">> PERSONAL PROJECTS</h2>
+
+    <div class="flex snap-x overflow-x-scroll space-x-4 p-4 select-none">
+      <% @personal_projects.each do |project| %>
+        <%= render partial: "components/image_card", locals: { project: project } %>
+      <% end %>
+    </div>
+
+  </section>
+
+  <section class="other-projects">
+    <h2 class="mb-3">> OTHER PROJECTS</h2>
+
+    <div class="flex snap-x overflow-x-scroll space-x-4 p-4 select-none">
+      <% @other_projects.each do |project| %>
+        <%= render partial: "components/image_card", locals: { project: project } %>
       <% end %>
     </div>
 
