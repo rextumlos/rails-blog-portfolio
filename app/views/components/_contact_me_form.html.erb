@@ -1,7 +1,7 @@
 <section class="contact-section">
   <h2 class="mb-3">> CONTACT ME</h2>
 
-  <%= form_with class: '' do |form| %>
+  <%= form_with url: contact_me_path, method: :post, id: "contact-form", class: '' do |form| %>
     <div class="relative z-0 w-full mb-5 group">
       <%= form.email_field :email, placeholder: " ", class: 'block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-primary-50 appearance-none focus:outline-none focus:ring-0 focus:border-primary peer' %>
       <%= form.label :email, "Email Address", class: 'peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-primary peer-focus:dark:text-primary peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6' %>
