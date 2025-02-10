@@ -4,7 +4,7 @@ RUN bundle config --global frozen 0
 RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
     curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
     curl -fsSL https://deb.nodesource.com/setup_18.x | bash && \
-    apt-get update && apt-get install -y python3-pip nodejs mariadb-client cron yarn --no-install-recommends && \
+    apt-get update && apt-get install -y python3-pip nodejs mariadb-client cron yarn vim-tiny --no-install-recommends && \
     rm -rf /var/lib/apt/lists/*
 
 ENV APP_PATH /usr/src/app
