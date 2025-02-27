@@ -3,7 +3,8 @@ module.exports = {
         './app/views/**/*.html.erb',
         './app/helpers/**/*.rb',
         './app/assets/stylesheets/**/*.css',
-        './app/javascript/**/*.js'
+        './app/javascript/**/*.js',
+        './app/javascript/stylesheets/*.css',
     ],
     theme: {
         extend: {
@@ -44,6 +45,17 @@ module.exports = {
                         70: 'rgba(2, 44, 27, 0.7)',        // 70% opacity
                     },
                 },
+                secondary: {
+                    DEFAULT: {
+                        DEFAULT: 'rgba(5, 75, 128, 1)', // 100% opacity
+                        30: 'rgba(5, 75, 128, 0.3)', // 100% opacity
+                        50: 'rgba(5, 75, 128, 0.5)', // 100% opacity
+                        70: 'rgba(5, 75, 128, 0.7)', // 100% opacity
+                    }
+                },
+                background_color: 'rgba(240, 240, 242, 1)', // 100% opacity
+                gray_text: 'rgba(125, 125, 125, 1)', // 100% opacity
+                black_text: 'rgba(27, 27, 27, 1)', // 100% opacity
             },
         },
     },

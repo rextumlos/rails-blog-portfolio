@@ -1,0 +1,81 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+
+
+html {
+    @apply font-sans;
+
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    height: 8px;
+    width: 4px;
+    background: gray;
+}
+::-webkit-scrollbar-thumb:horizontal{
+    background: rgba(0, 116, 46, 1);
+    border-radius: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @apply font-header font-bold text-primary;
+}
+
+p, li {
+    @apply text-sm lg:text-base;
+}
+
+h1 {
+    @apply text-3xl lg:text-4xl;
+}
+
+h2 {
+    @apply text-xl lg:text-2xl;
+}
+
+h3 {
+    @apply text-lg lg:text-xl;
+}
+
+.main-container {
+    @apply container mx-auto;
+
+    max-width: 1200px;
+}
+
+.link {
+    @apply p-2 border-b-4 border-transparent text-sm lg:text-lg;
+
+    &:hover {
+        @apply border-primary;
+    }
+}
+
+.link__active {
+    @apply border-primary;
+}
+
+.line-break {
+    @apply border-2 border-primary my-5 mx-auto md:w-full;
+
+    width: 95%;
+
+    @media (min-width: 768px) {
+        width: 100%;
+    }
+}
+
+.vertical-line {
+    @apply border-2 border-primary h-full;
+}
+
+.primary-button {
+    @apply text-white bg-primary hover:bg-primary-light focus:ring-4 focus:ring-primary font-medium text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none;
+}
+

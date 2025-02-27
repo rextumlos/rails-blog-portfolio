@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :blogs, only: :index
   post "/contact_me", to: "contact#create", as: "contact_me"
   
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
